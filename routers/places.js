@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { getPlaces } = require("../controllers/placeController");
+const { getPlaces, updateUserPlaces } = require("../controllers/placeController");
 
 router.route("/places").get(getPlaces);
+router.route("/user-places").put(updateUserPlaces);
 
 module.exports = router;
